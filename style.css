@@ -1,0 +1,95 @@
+:root{
+  --bg:#0e0f13; --panel:#171a21; --panel2:#1d212a; --line:#2a2f3a;
+  --txt:#d6dae3; --txt2:#8b93a3; --green:#4aba55; --green2:#3a9c44;
+  --gold:#e0b43c; --purple:#9d6bf0; --red:#d9534f; --blue:#3d8ee0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.65;
+  background-image:radial-gradient(circle at 50% 0%,rgba(74,186,85,.10),transparent 55%);
+}
+/* Hero */
+.hero{padding:3rem 1.2rem 2rem;text-align:center;border-bottom:1px solid var(--line)}
+.hero-inner{max-width:860px;margin:0 auto}
+.logo{font-size:2.6rem;font-weight:800;letter-spacing:1px;color:#fff}
+.logo span{color:var(--green)}
+.slogan{color:var(--green);letter-spacing:4px;font-size:.9rem;margin-top:.35rem}
+.sub{font-size:1.15rem;color:var(--txt);margin-top:.7rem}
+.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:.45rem;margin:1.1rem 0}
+.badges span{background:var(--panel2);border:1px solid var(--line);color:var(--txt2);padding:.2rem .6rem;border-radius:99px;font-size:.78rem}
+.notice{margin-top:1rem;background:rgba(217,83,79,.10);border:1px solid rgba(217,83,79,.4);color:#e8a4a1;padding:.6rem .9rem;border-radius:8px;font-size:.82rem;text-align:left}
+/* Nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(14,15,19,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:.4rem;flex-wrap:wrap;padding:.55rem}
+.nav a{color:var(--txt2);text-decoration:none;padding:.35rem .75rem;border-radius:6px;font-size:.85rem;transition:.18s}
+.nav a:hover{color:#fff;background:var(--panel2)}
+/* Layout */
+.container{max-width:1080px;margin:0 auto;padding:1.5rem}
+section{margin-bottom:2.6rem;scroll-margin-top:60px}
+h2{color:var(--green);font-size:1.35rem;margin-bottom:.8rem;padding-left:.6rem;border-left:3px solid var(--green)}
+h3{color:#fff;font-size:1.02rem;margin:1.4rem 0 .7rem}
+.tip{color:var(--txt2);font-size:.88rem;margin-bottom:.4rem}
+.tip b{color:var(--green)}
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.9rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.05rem;transition:.18s;display:flex;flex-direction:column}
+.card:hover{border-color:var(--green);transform:translateY(-3px)}
+.card.rec{border-color:var(--green);box-shadow:0 0 18px rgba(74,186,85,.14)}
+.card.mod:hover{border-color:var(--purple)}
+.card.old:hover{border-color:var(--gold)}
+.card h4{font-size:1.02rem;color:#fff;margin-bottom:.45rem}
+.tags{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.55rem}
+.tag{background:var(--panel2);border:1px solid var(--line);color:var(--txt2);padding:.12rem .45rem;border-radius:4px;font-size:.72rem}
+.tag.main{background:rgba(74,186,85,.18);border-color:var(--green2);color:#8fd694}
+.tag.best{background:var(--green);color:#0e0f13;border-color:var(--green);font-weight:600}
+.tag.beta{background:rgba(61,142,224,.2);border-color:var(--blue);color:#9dc4ee}
+.tag.stop{background:rgba(217,83,79,.18);border-color:var(--red);color:#e8a4a1}
+.tag.mod{background:rgba(157,107,240,.2);border-color:var(--purple);color:#c3a4f5}
+.tag.old{background:rgba(224,180,60,.18);border-color:var(--gold);color:#e8cd82}
+.feat{list-style:none;display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.5rem}
+.feat li{background:rgba(74,186,85,.10);color:#9bca9f;font-size:.72rem;padding:.1rem .4rem;border-radius:3px}
+.meta{font-size:.76rem;color:var(--txt2);margin-bottom:.6rem;flex:1}
+.btn{display:inline-block;background:var(--green);color:#0e0f13!important;text-decoration:none;font-weight:600;padding:.45rem .8rem;border-radius:6px;font-size:.83rem;margin:.25rem .3rem 0 0;transition:.18s}
+.btn:hover{background:#5fd469}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--txt)!important;font-weight:400}
+.btn.ghost:hover{border-color:var(--txt2)}
+.btn.mod{background:var(--purple);color:#fff!important}
+.btn.mod:hover{background:#ae7df5}
+.btn.old{background:transparent;border:1px solid var(--gold);color:var(--gold)!important}
+.btn.old:hover{background:rgba(224,180,60,.15)}
+/* Why */
+.why{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+.why-item{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.1rem;text-align:center}
+.why-item .ico{font-size:1.7rem}
+.why-item h4{color:#fff;font-size:.95rem;margin:.4rem 0 .25rem}
+.why-item p{color:var(--txt2);font-size:.82rem}
+/* Prose */
+.prose{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.25rem}
+.prose p{color:var(--txt2);font-size:.9rem;margin-bottom:.6rem}
+.prose p:last-child{margin-bottom:0}
+.prose b{color:var(--txt)}
+.warn-line{color:#e8cd82!important}
+/* FAQ */
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin-bottom:.55rem;padding:.2rem .9rem}
+.faq summary{cursor:pointer;padding:.55rem 0;font-size:.9rem;color:#fff;font-weight:500;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"▶ ";color:var(--green);font-size:.65rem}
+.faq[open] summary::before{content:"▼ "}
+.faq p{color:var(--txt2);font-size:.86rem;padding-bottom:.7rem}
+.faq code{background:var(--panel2);padding:.1rem .35rem;border-radius:3px;color:#9dc4ee;font-size:.82rem}
+/* Contact */
+.contact-box{background:var(--panel);border:1px solid var(--green2);border-radius:10px;padding:1.2rem;text-align:center}
+.contact-box p{color:var(--txt2);font-size:.9rem}
+.mail{font-size:1.25rem!important;margin:.5rem 0!important}
+.mail a{color:var(--green);text-decoration:none;font-weight:700}
+.mail a:hover{text-decoration:underline}
+.small{font-size:.8rem!important;color:#6f7784!important}
+/* Footer */
+footer{text-align:center;padding:1.8rem 1rem;border-top:1px solid var(--line);color:var(--txt2);font-size:.8rem;line-height:1.9}
+@media(max-width:600px){
+  .logo{font-size:1.9rem}
+  .container{padding:1rem}
+  .nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+  .nav a{white-space:nowrap}
+}
